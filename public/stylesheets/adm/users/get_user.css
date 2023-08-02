@@ -1,0 +1,23 @@
+.box_get_user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fdfdfd;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.274);
+    text-align: start;
+    font-size: 13pt;
+    padding: 10px;
+}
+.img_avatar{
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.img_avatar img{
+    height: 100%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px black;
+    image-rendering: optimizeQuality;
+}

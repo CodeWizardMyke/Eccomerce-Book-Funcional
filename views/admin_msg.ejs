@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/administrador.css">
+<body>
+    <%- include('partials/header.ejs') %> 
+    <main class="container">
+        <div class="bg-light p-5">
+            <div class="text-center">
+                <div class="pb-3">
+                    <strong>Assunto: </strong>
+                    <span><%= feedback.assunto %> </span>
+                </div>
+                <div class="p-5 m-2 border">
+                    <div>
+                        <strong>Mensagem:</strong>
+                    </div>
+                    <p>
+                        <%= feedback.msg %> 
+                    </p>
+                </div>
+            </div>
+            <form action="/admin/feedback/<%= feedback.id_feedback %>" method="post">
+                <div class="text-center">
+                    <label for="status"><strong>Mudatar Status</strong></label>
+                    <select name="status" id="status" class="text-center">
+                        <optgroup>
+                            <option value="<% feedback.status %>" disabled>status atual: <%= feedback.status %> </option>
+                        </optgroup>
+                        <option value="pending">pending</option>
+                        <option value="resolved">resolved</option>
+                    </select>
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-light border">Atualizar</button>
+                    </div>
+                    <div>
+                        <a class="page_back btn btn-light border">Voltar a página anterior</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include('partials/footer') %> 
+    <script src="/js/admin_sistem.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>

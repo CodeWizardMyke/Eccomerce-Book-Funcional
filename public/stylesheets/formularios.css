@@ -1,0 +1,67 @@
+main{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-alfa);
+    border-radius: 5px;
+}
+div.row{
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px black;
+    border-radius: 5px;
+}
+.box-logo-forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding: 10px;
+}
+
+.box-logo-login img{
+    width: 150px;
+}
+.boxSpacing{
+    display: block;
+    height: 100px;
+}
+input{
+    margin: 10px auto 10px auto;
+}
+.button-group{
+    margin: 50px auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* login css*/
+
+.createAcc{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 15px auto 10px auto;
+    padding: 5px;
+    height: 100px;
+}
+.createAcc a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    width: max-content;
+    border: solid rgba(179, 179, 179, 0.664) 1px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.createAcc a:hover {
+    background-color:#ffc107c0;   
+}

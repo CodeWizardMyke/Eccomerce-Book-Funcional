@@ -1,0 +1,46 @@
+.s{
+    background-color: rgb(139, 5, 5) !important;
+}
+/*para delimitar tamanho maximo do box*/
+.h-275{
+    height: 275px;
+    width: 190px;
+}
+/*imagem ajustada ao tamanho do box que a contêm*/
+.prod_img{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 2px;
+    border-radius: 5px;
+}
+/*para demilitar o tamanho desta caixa em 325px com display flex alg center*/
+.h-325{
+    height: 325px;
+    display: flex;
+    align-items: center;
+    background-color: #f3f3f3;
+    border: #dddd solid 1px;
+    padding: 5px;
+    margin: 10px auto 10px auto;
+}
+/*para esta tag ativa aplique este efeito*/
+.on-325:hover{
+    box-shadow: #ddd 0px 0px 15px;
+    transition: all 600ms;
+}
+.h-275-text{
+    position: relative;
+    height: 275px;
+    width: 100%;
+    padding-left: 10px;
+}
+.prod-text-group p{
+    margin: 2px;
+    padding: 0px;
+}
+.link-prod-search a{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}

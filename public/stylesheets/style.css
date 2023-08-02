@@ -1,0 +1,423 @@
+/* ------------------ variaveis de cores ------------------*/
+:root{
+  --azul-forte : #74b9ff;/*cor dedicada ao topo do header*/
+  --azul-claro : #daf2ff;/*cor dedicada ao bottom do header*/
+  --bg-alfa :  rgba(255, 255, 255,.4);
+  --select: rgba(160, 160, 160,.9);
+}
+
+/* ------------------ cores app ------------------*/
+.box {
+  background-color: var(--bg-alfa);
+  box-shadow:  1px 1px 10px solid var(--bg-alfa) ;
+}
+.bg-page{
+  background: #fff !important;
+}
+.select_of{
+  user-select: none;
+}
+
+main{
+  padding:0;
+  width: 100%;
+  background-color: var(--bg-alfa);
+  border-radius: 5px;
+}
+
+/* ------------------ definição do background da página em geral ------------------*/
+body{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  height: 100vh;
+}
+header{
+  user-select: none;
+}
+
+#content_view{
+  padding: 15px 0 15px 0;
+}
+.btn-person{
+  transition: all 500ms;
+}
+.btn-person:hover{
+  box-shadow: 0px 0px 15px rgb(37, 37, 35);
+}
+
+/*banners painel*/
+.banner{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 175px;
+}
+.banner img{
+  height: 100%;
+}
+
+/* ------------------ formatação da header-top ------------------*/
+.header-top{
+  background-color: var(--azul-forte);
+  padding: 5px 0 5px 0;
+}
+
+/*------------------= painel do usuario ------------------*/
+.painel-perfil{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.box-min-perfil{
+  width: 75%;
+  text-align: center;
+}
+.link-group{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.bt-perfil{
+  text-decoration: none;
+  font-weight: 900;
+  color: #dddd;
+  transition: all 400ms;
+}
+.bt-perfil:hover{
+  color: #fff;
+}
+.bt-exit{
+  text-decoration: none;
+  font-weight: 900;
+  color: #dddd;
+  transition: all 400ms;
+}
+.bt-exit:hover{
+  color: #fff;
+}
+.avatar-box{
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+}
+.avatar-box img{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+/*----------------- formatação do bottom do header -------------------*/
+.bg-menu-bottom{
+  background-color: var(--azul-claro);
+}
+
+/*nav-menu do header parte inferior*/
+.config-nav{
+  display: flex;
+  height: 40px;
+  justify-content: space-evenly;
+}
+.config-nav a{
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+}
+.config-nav li:hover a{
+  color: black;
+}
+
+.config-nav li:hover{
+  border-bottom: solid 4px var(--azul-forte);
+}
+
+/*--------------- drop down menu configs ------------------*/
+.swap-bottom{
+  display: none;
+}
+
+/*----------------- formatação dos box dos livros -------------------*/
+.row-books{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.row-books a{
+  text-decoration: none;
+  color: black;
+}
+.img-product{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 175px;
+   width: 100%;
+}
+.img-product img{
+  image-rendering: pixelated;
+ height: 175px;
+ width: 120px;
+ background-color: #ffff;
+ border-radius: 5px;
+}
+.content-text{
+  position: relative;
+  height: 120px;
+  text-align: center;
+  padding: 5px;
+  margin: 2px 0 2px 0;
+  font-size: 12pt;
+  font-weight: 600;
+}
+.content-price{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 175px;
+  bottom: 0;
+  left: 0;
+}
+.content-price p{
+  margin: 0;
+  font-size: 10pt;
+}
+.content-price small{
+  font-size: 14pt;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800;
+  color: rgba(255, 17, 17, 0.5);
+}
+.border-on{
+  background-color: #fff;
+  border-radius: 5px;
+}
+.border-on:hover{
+  box-shadow: 0px 0px 15px #00000083;
+  -webkit-transform: scale(1.01);
+  transition: 600ms all;
+}
+
+.border-on:hover .content-price{
+  opacity: 1;
+  left: 0;
+  border-radius: 5px;
+  background-color: #e6e6e6;
+}
+
+
+/*ERROS*/
+.errors{
+  font-size: 14pt;
+  text-align: center;    
+  background-color: rgba(255, 255, 255, 0.767);
+}
+.errors ul{
+  list-style: none;
+  padding: 5px;
+}
+.errors li{
+  border: 2px red solid;
+  color: red;
+}
+.danger{
+  color: red;
+  font-size: 10pt;
+  font-weight: 500;
+  background-color: rgba(221, 221, 221, 0.082);
+}
+/*-----------TRATAMENTO DE ERRORS ----------------*/
+.sucess{
+  font-size: 16pt;
+  font-weight: bolder;
+  background-color: #92c78483 ;
+}
+
+.error{
+  font-size: 10pt;
+  color: red;
+}
+
+.invalid{
+  border: 2px solid red;
+}
+
+/*---------- LINK REMOVER ITEM -------------*/
+.remove-item{
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  transition: all 200ms;
+}
+.remove-item:hover{
+  color: red;
+}
+/*---------- LINK SELECT DESABILITADO  -------------*/
+.disabled{
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: #fff;
+  border: none !important;
+}
+.disabled:hover{
+  box-shadow: none !important;
+}
+/*---------- DISPLAY NONE -------------*/
+.d-none{
+  display: none;
+}
+.d-block{
+  display: block;
+}
+
+.border-none{
+  border: none !important;
+  font-weight: 800;
+  background-color: rgba(0, 0, 0,0.1) !important;
+  transition: all 600ms;
+}
+.border-none:hover{
+  -webkit-transform: scale(1.02);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+/*------------- produto indisponível ou disponível no estoque---------------*/
+.unavailable{
+  color: red;
+  font-weight: 600;
+}
+.available{
+  color: rgb(113, 187, 1);
+  font-weight: 600;
+}
+
+
+/*paginação css*/
+#paginate .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+#paginate .pagination div{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+#paginate .pagination div:not(.numbers),
+#paginate .pagination div.numbers div{
+  width: 40px;
+  height: 40px;
+  border: black solid 1px;
+}
+
+#paginate .pagination div.numbers div:hover,
+#paginate .pagination div.numbers div.active {
+  color: #74b9ff;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nActive{
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+  border: #74b9ff solid 2px;
+}
+
+/*formatação padrao*/
+
+.center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.margin-rl-auto{
+  margin: 0 auto 0 auto;
+}
+
+.bt-search{
+  display: none;
+}
+
+/*pop up configs*/
+.msg-pop-up{
+  position: fixed;  
+  top: 0; bottom: 0;
+  left: 0;right: 0;
+  background-color: #fff;
+  margin: auto;
+  box-shadow: black 0px 0px 15px;
+  height:60px;
+  width: 270px;
+  border-radius: 15px;
+  display: none;
+}
+.centralize{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*carousel setings*/
+.carousel-container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+.img-carousel{
+  width: 500px;
+  height: 100%;
+}
+.img-carousel img{
+  height: 100%;
+  padding: 25px;
+}
+.text-carousel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;;
+  height: 100%;
+  padding: 25px;
+}
+.limit-text{
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 225px;
+  overflow-y: hidden;
+}
+.btn-carousel{
+  position: absolute;
+  bottom: 50px;
+}
+
+/*janela pop up config*/
+#pop_up{
+  position: fixed;  
+  top: 0; bottom: 0;
+  left: 0;right: 0;
+  background-color: #fff;
+  margin: auto;
+  overflow-y: hidden;
+  box-shadow: black 0px 0px 15px;
+  height:550px;
+  width: 60%;
+  border-radius: 15px;
+  display: none;
+}

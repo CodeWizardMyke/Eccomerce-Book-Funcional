@@ -1,0 +1,45 @@
+.img_book{
+    height: 200px;
+}
+.img_book img{
+    height: 100%;
+}
+.painel_left_adm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.painel_left_adm >div{
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    font-size: 11;
+    box-shadow: 0px 0px 15px #dddd;
+    transition: all 400ms;
+}
+.scale:hover{
+    -webkit-transform: scale(1.05);
+}
+.box_user{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.info_user p,h4{
+    margin: 0 0 0 25px;
+}
+.info_user{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-left: 25px;
+}
+.payment_user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #dddd;
+}

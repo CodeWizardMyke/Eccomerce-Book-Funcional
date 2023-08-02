@@ -1,0 +1,126 @@
+.content_page_adm{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-around;
+}
+.painel_rigth_adm{
+    width: 300px;
+    margin: 0px auto 0px auto;
+}
+.painel_left_adm{
+    margin: auto!important;
+    width: 900px;
+    padding: 10px;
+    min-height: 655px;
+}
+.dropdown-item:hover{
+ background-color: #dddd;
+}
+.btn_dropdown{
+    width: 100%;
+    border-radius: 10px;
+    margin: 5px auto 5px auto;
+    height: 35px;
+    background-color:#fff;
+    border: solid 1px #dddd;
+    font-size: 12pt;
+    font-weight: 500;
+    transition: all 300ms;
+}
+.btn_dropdown:hover{
+    background-color: #ddd;
+}
+.btn_dropdown:focus{
+    background-color: rgba(10, 10, 10, 0.74);
+    color: rgb(255, 255, 255);
+}
+.user_adm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+.user_adm img{
+    width: 65px;
+    border-radius: 50%;
+}
+#content_adm{
+    margin: auto;
+    min-height: 700px;
+}
+
+/* formatação para busca de produtos*/
+.painel_left_adm{
+    user-select: none;
+    margin: 5px;
+}
+.product_search_content input[type = search]{
+    height: 35px;
+    width: 250px;
+    border: solid black 2px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px;
+}
+#search_result{
+    min-height: 600px;
+}
+
+.img_prod_edit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 15px;
+    height: 250px;
+    width: 100%;
+}
+.img_prod_edit img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 20% 10%; /* try 20% 10% */ 
+    border-radius: 15px;
+}
+.form_user_create{
+    margin-top: 100px;
+}
+.div_check_box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.div_check_box div{
+    padding: 10px;
+}
+#chart_div{
+    width: 100%;
+    height: 400px;
+}
+.box_graphics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.box_graphics{
+    position: relative;
+    box-shadow: 0 0 15px #ddd;
+}
+
+.msg-graph{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    bottom: 50%;
+    width: 100%;
+}

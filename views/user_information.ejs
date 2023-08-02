@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head') %> 
+</head>
+<body>
+    <%- include('partials/header') %> 
+    <main class="container">
+        <div class="bg-light p-5">
+            <div class="row box-info-forms ">
+                <div class="col-12">
+                    <form id="myForm">
+                        <div>
+                            <h2>Dados pessoais</h2>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" value="" name="full_name" id="name" placeholder="nome completo" class="form-control">
+                            <div id="err_full_name"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="email" value="" name="email" id="email" placeholder='Email contato' class="form-control">
+                            <div id="err_email"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="tel" value="" name="telephone" id="tel" placeholder="Telefone" class="form-control">
+                            <div id="err_telephone"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="age">Data de Nascimento</label><br>
+                            <input type="date" value="" name="birth_date" id="age" class="form-control">
+                            <div id="err_birth_date"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" value="" name="user_cpf" id="cpf" placeholder="informe o seu CPF"  class="form-control">
+                            <div id="err_user_cpf"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" value="" name="user_rg" id="user_rg" placeholder="informe o seu RG" class="form-control">
+                            <div id="err_user_rg"></div>
+                        </div>
+                        <div>
+                            <h2>Endereço</h2>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" value="" id="cep" name="cep" placeholder="CEP: 00000-000">
+                            <div id="err_cep"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" value="" id="logradouro" name="road" placeholder="Rua.">
+                            <div id="err_road"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" value="" id="numero" name="number" placeholder="N° Rua.">
+                            <div id="err_number"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" value="" id="bairro"  name="district" placeholder="Bairro">
+                            <div id="err_district"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" value="" id="localidade" name="city" placeholder="Cidade">
+                            <div id="err_city"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" value="" id="uf" name="state" placeholder="Estado">
+                            <div id="err_state"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" value="" id="complemento" name="complements" placeholder="complemento">
+                            <div id="err_complements"></div>
+                        </div>
+                        <button type="submit" class="btn btn-light border">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/js/user/set_data/information.js"></script>
+    <%- include('partials/footer') %> 
+</body>
+</html>

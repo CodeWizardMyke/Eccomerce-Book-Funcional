@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head') %> 
+    <link rel="stylesheet" href="/stylesheets/profile/profile.css">
+    <link rel="stylesheet" href="/stylesheets/cart.css">
+</head>
+<body>
+    <%- include('partials/header') %> 
+    <div id="user_not_authorized" class="d-none">
+        <div class="container">
+            <div style="height: 70vh;" class="bg-white d-flex justify-content-center align-items-center">
+                <div class="border p-5" style="height: max-content;">
+                    <h2>pagina não autorizada</h2>
+                    <span>faça login novamente, para acessar esta pagina</span>
+                    <div class="text-center mt-5">
+                        <a href="/auth/login" class="btn btn-info">Ir para login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="container d-none" id="user-profile">
+        <div id="user_auth">
+            <div class="box-perfil" style="height: 75vh;">
+                <div class="side-left col-4">
+                    <div class="avatar-usuario col-8" id="avatar-usuario"></div>
+                    <div id="profile-nav">
+                        <ul class="nav flex-column menu">
+                            <li><div class="bt-profile btn btn-info" id="bt-cart">Carrinho</div></li>
+                            <li><div class="bt-profile btn btn-info" id="bt-purchases">Pedidos</div></li>
+                            <li><div class="bt-profile btn btn-info" id="bt-information">Dados Pessoais</div></li>
+                            <li><div class="bt-profile btn btn-info" id="bt-user">Sua Conta</div></li>
+                        </ul>
+                    </div>
+                    <div class="box-space"></div>
+                </div>
+                <div class="side-right" id="aside_rigth">
+                    <%- include('partials/user/cart') %> 
+                    <%- include('partials/user/information') %>
+                    <%- include('partials/user/purchases') %> 
+                    <%- include('partials/pop_up/user_config') %>
+                    <div id="pop_up">
+                        <%- include('partials/pop_up/information') %> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="user_notAuthorized"></div>
+    </main>
+    <%- include('partials/footer') %> 
+    <script src="/js/user/get_data/user_profile.js"></script>
+    <script src="/js/user/set_data/information_put_del.js"></script>
+    <script src="/js/user/set_data/user_data.js"></script>
+</body>
+</html>

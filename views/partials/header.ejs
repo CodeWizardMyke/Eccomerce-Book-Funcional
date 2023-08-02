@@ -1,0 +1,60 @@
+<header class="mb-2">
+    <div class="header-top"> 
+        <div class="container d-flex align-items-center " style="height: 70px;">
+            <div class="d-flex align-items-center justify-content-between col-12">
+                <a href="/" class=" col-3">
+                    <img src="/images/img/logo.png"  class="" alt="logo">
+                </a>
+                <div class="col-3 col-sm d-flex justify-content-start">
+                    <form action="/search/&" class="mr-5"  role="search">
+                        <label for="search" class="bt-search"></label>
+                        <input type="search" class="form-control" id="search" placeholder="Search..." aria-label="Search" name="search">
+                    </form>
+                </div>
+                <div class="col-3 box-min-pUser" style="width: 200px ;">
+                    <div class="text-center btn-log" id="bt-user-off"></div>
+                    <div class="painel-perfil" id="painel-user-on">
+                        <div class="box-min-perfil">
+                            <div id="user_name"></div>
+                            <div class="link-group" id="btn_user_on"></div>
+                        </div>
+                        <div class="avatar-box" id="avatar_user"></div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>  
+    <div class="p-1 mt-2 bg-menu-bottom">
+        <nav class="container">
+            <ul class="nav config-nav swap-top" >
+                <li class="nav-item">
+                    <a href="/products/library" class="nav-link ">biblioteca</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/products/bestsaler" class="nav-link " >mais vendidos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/products/indication" class="nav-link ">indicações</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/purchase/cart" id="cart_link-1" class="nav-link d-none">carrinho</a>
+                </li>
+            </ul>
+            <div class="swap-bottom">
+                <div class="dropdown me-2">
+                    <a class="dropdown-toggle btn btn-person" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="/products/library">biblioteca</a>
+                      <a class="dropdown-item" href="/products/bestsaler">mais vendidos</a>
+                      <a class="dropdown-item" href="/products/indication">indicações</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="/purchase/cart" id="cart_link-2" class="btn btn-person d-none">carrinho</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>

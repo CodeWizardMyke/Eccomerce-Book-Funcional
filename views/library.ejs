@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include('partials/head')  %> 
+    <link rel="stylesheet" href="/stylesheets/biblioteca.css">
+<body>
+    <%- include('partials/header') %>
+    <main class="container">
+      <div class="bg-light row p-2 m-0">
+          <section class="row">
+              <div class="nav-genero border mt-2">
+                  <div class=" text-center me-1">
+                      <h3>Generos </h3>
+                  </div>
+                  <ul class="nav nav-tabs m-5" id="library_menu">
+                      <li class="nav-item">
+                          <button id="bt-novel" value="novel" class="nav-link">Romance</button>
+                      </li>
+                      <li class="nav-item">
+                          <button id="bt-fiction" value="fiction" class="nav-link">ficção</button>
+                      </li>
+                      <li class="nav-item">
+                          <button id="bt-cousebook" value="cousebook" class="nav-link">didáticos</button>
+                      </li>
+                      <li class="nav-item">
+                          <button id="bt-storybook" value="storybook" class="nav-link">infantil</button>
+                      </li>
+                      <li class="nav-item">
+                          <button id="bt-terror" value="terror" class="nav-link">terror</button>
+                      </li>
+                      <li class="nav-item">
+                          <button id="bt-finance" value="finance" class="nav-link">finanças</button>
+                      </li>
+                      <li class="nav-item">
+                          <button id="bt-poetry" value="poetry" class="nav-link">poesia</button>
+                      </li>
+                      <li class="nav-item">
+                          <button id="bt-manga" value="manga" class="nav-link">Mangá</button>
+                      </li>
+                      <li class="nav-item">
+                          <button id="bt-ligth" value="ligth" class="nav-link">Ligth Novels</button>
+                      </li>
+                  </ul>
+              </div>
+              <div id="center_page">
+                <div>
+                  <h4 class="border-bottom p-2">biblioteca</h4>
+                </div>
+                <div id="preload" class="row">
+                  <% for(let i = 0; i <= 23 ; i++) {%>
+                  <div class="col-6 col-sm-4 col-lg-3 col-xl-2 p-3">
+                    <div class="border-on">
+                      <div class="img-product"></div>
+                      <div class="content-text"></div>
+                    </div>
+                  </div>
+                  <% } %> 
+                </div>
+                <div class="row-books d-none" id="row_products"></div>
+              </div>
+          </section>
+          <nav aria-label="Navegação de página">
+            <ul class="pagination justify-content-center p-3">
+                <li class="page-item"><button class="page-link me-2" id="previous">Anterior</button></li>
+                <li class="page-item"><button class="page-link" id="next">Próximo</button></li>
+            </ul>
+          </nav>
+      </div>
+    </main>
+    <%- include('partials/footer') %>
+    <script src="/js/functions/CreateProductsContent.js"></script>
+    <script src="/js/products/get-products-library.js"></script>
+</body>
+</html>

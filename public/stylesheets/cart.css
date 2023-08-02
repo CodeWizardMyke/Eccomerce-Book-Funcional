@@ -1,0 +1,245 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.bg-lblue{
+    background-color: #74b9ff;
+    color: white;
+}
+
+#content_painel_cart{
+
+}
+
+#content_cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 570px;
+    padding: 10px;
+    overflow-y: auto;
+    user-select: none;
+}
+
+#content_box_cart{
+    display: flex;
+    background-color: #ffffff;
+    height: 130px;
+    margin: 5px auto 5px auto;
+}
+#content_painel_cart{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*input qtd items*/
+#input_qtd{
+    width: 50px;
+    margin-left: 10px;
+    border: none;
+    text-align: center;
+    background-color: #dddddd4f;
+    border-radius: 5px;
+}
+
+/*formater item cart */
+.box_img_book_cart{
+    height: 130px;
+    width: 95px;
+    border: black solid 2px;
+}
+.img_book_cart{
+    height: 100%;
+    width: 100%;
+}
+
+.info_cart_text{
+    position: relative;
+    width:83% ;
+    padding-left: 5px;
+    user-select: none;
+}
+
+
+/*div forms*/
+.div_forms{
+    display: flex;
+    justify-content: end;
+}
+.form_delete_cart button{
+    border: none;
+    background-color: #dddddd00;
+    margin-bottom: 10px ;
+    border-radius: 5px;
+    padding: 2px;
+    border: solid 1px #ffff;
+    margin: auto 15px auto ;
+}
+
+.bt_delete:hover{
+    border: 1px solid #dddd;
+    color: red;
+}
+.bt_delete:focus{
+    border: 1px solid red;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.2);
+    color: red;
+}
+.bt_put:hover{
+    border: 1px solid #dddd;
+    color: orange;
+}
+.bt_put:focus{
+    border: 1px solid orange;
+    box-shadow: 0px 0px 15px rgba(255, 136, 0, 0.2);
+    color: orange;
+}
+
+
+/*formatando content_pay_cart*/
+#pay_cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 570px;
+    padding: 10px;
+}
+#information_pay{
+    width: 450px;
+    height: 250px;
+    background-color: #ffff;
+    border: 1px solid #dddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5px;
+}
+#content_pay_cart{
+    width: 450px;
+    height: 250px;
+    border: #ddd 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+
+/*config pop up janela da informação de usuario e endereço*/
+#form_information_cart{
+    position: relative;
+}
+#form_info_title{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+#form_info_user{
+    display: none;
+}
+
+#form_info_title div{
+    margin-right: 1px;
+    width: 100%;
+    border-radius: 10px 0 10px 0;
+    user-select: none;
+    border: #dddd solid 1px;
+
+}
+#form_info_title span{
+    font-weight: 700;
+    font-size: 15pt;
+}
+.form-close{
+    user-select: none;
+    cursor: pointer;
+}
+.form-close:hover{
+    color: red;
+    border-bottom: #ddd solid 1px;
+}
+
+.div_clean{
+    display: flex;
+    justify-content: end;
+    margin-top: 5px;
+}
+.btn_clean_cart{
+    text-decoration: none;
+    color: #696969dd;
+    border: rgba(0, 0, 0, 0) solid 1px;
+    cursor: pointer;
+    user-select: none;
+}
+.btn_clean_cart:hover{
+    color: red;
+    border-bottom: red solid 1px;
+}
+.field_empty{
+    border: red solid 2px;
+}
+.div_msg_information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.msg_information{
+    padding: 15px;
+    color:  #92c78483;
+    border: solid #dddd 2px;
+    user-select: none;
+}
+
+
+ #information_pay{
+    width: auto;
+    height: auto;
+ }
+
+#content_pay_cart{
+    width: auto;
+    text-align: center;
+    border: none;
+}
+
+ @media (max-width: 700px) {
+    #pop_up{
+        width: 90vw;
+    }
+    #information_pay{
+        width: 240px;
+        height: 400px;
+     }
+    
+    #content_pay_cart{
+    width: 240px;
+    text-align: center;
+    }
+ }
+
+ @media (max-width: 700px) {
+    #pop_up{
+        width: 90vw;
+    }
+    #information_pay{
+        width: 350px;
+        height: 400px;
+     }
+    
+     #content_pay_cart{
+        width: 350px;
+        text-align: center;
+     }
+ }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include('partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/adm/products/prod.css">
+<body>
+    <%- include('partials/header') %> 
+    <main class="container">
+        <div class="bg-light p-2 page-config">
+            <div id="product">
+                <div id="box-for-prod">
+                    <div id="front_cover" class="img_book"></div>
+                    <div id="box-for-inf">
+                        <div>
+                            <small>Titulo:</small>
+                            <div id="title"></div>
+                        </div>
+                        <div>
+                            <small>Autor:</small>
+                            <div id="author"></div>
+                        </div>
+                        <div>
+                            <small>Edição:</small>
+                            <div id="edition"></div>
+                        </div>
+                        <div>
+                            <small>Dimensão:</small>
+                            <div id="dimensions"></div>
+                        </div>
+                        <div>
+                            <small>Genero:</small>
+                            <div id="genre"></div>
+                        </div>
+                        <div>
+                            <small>Editora:</small>
+                            <div id="publishing_company"></div>
+                        </div>
+                        <div>
+                            <small>Idioma</small>
+                            <div id="language"></div>
+                        </div>
+                        <div>
+                            <small>Data de Publicação:</small>
+                            <div id="publication_date"></div>
+                        </div>
+                        <div>
+                            <small>Qtd Páginas:</small>
+                            <div id="number_pages"></div>
+                        </div>
+                        <div>
+                            <small>Formato Kindle: R$</small>
+                            <div id="kindle_price"></div>
+                        </div>
+                        <div>
+                            <small>Formato Capa Dura: R$</small>
+                            <div id="common_price"></div>
+                        </div>
+                        <div>
+                            <small>Edição Especial: R$</small>
+                            <div id="special_price"></div>
+                        </div>
+                        <div>
+                            <small>Qtd em estoque:</small>
+                            <div id="inventory"></div>
+                        </div>
+                        <div>
+                            <small>Status Do Produto:</small>
+                            <div id="status"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4 class="text-center">Sinopse do livro:</h4>
+                        <div id="synopsis"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-end">
+                <button type="button" class="btn btn-light" id="remove_prod">Desativar / Ativar</button>
+                <button type="button" class="btn btn-light" id="put_prod">Abir edição de produto</button>
+                <button type="button" class="btn btn-light" id="for_back">Voltar / Admin</button>
+            </div>
+            <form id="myForm" class="d-none">
+                <div class="text-center"><h4>Modificar Registro</h4></div>
+                <div class="text-end"><button type="button" id="close_form" class="btn btn-light">Fechar Formulário</button></div>
+                <div class="form-group">
+                    <input type="text" name="title" id="title"  class="form-control" placeholder="Titulo...">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="author" id="author" class="form-control" placeholder="Autor...">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="publishing_company" id="publishing_company" class="form-control" placeholder="Editora..." >
+                </div>
+                <div class="form-group">
+                    <input type="text"  name="dimensions" id="dimensions" class="form-control" placeholder="Dimensões...">
+                </div>
+                <div class="form-group">
+                    <input type="number" min="15" name="number_pages" id="number_pages"  class="form-control" placeholder="Quantidade de paginas">
+                </div>
+                <div class="form-group">
+                    <input type="date"  name="publication_date" id="publication_date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="number" min="1" name="edition" id="edition" class="form-control"  placeholder="edição">
+                </div>
+                <div class="form-group">
+                    <select name="language" id="lang" class="form-control">
+                        <option value="portugues">Portugês</option>
+                        <option value="ingles">ingles</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="synopsis" id="synopsis" class="form-control" cols="50" rows="5" placeholder="Conteúdo da sínopse do livro"></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <input type="file" name="front_cover" id="front_cover" class="form-control">
+                    <div id="error_front_cover"></div>
+                </div>
+                <div class="form-group">
+                    <select name="genre" id="genre" class="form-control">
+                        <option disabled>Selecione um Genero</option>
+                        <option value="poetry">Poesia</option>
+                        <option value="novel">Romance</option>
+                        <option value="cousebook">Didaticos </option>
+                        <option value="storybook">Infantil </option>
+                        <option value="terror">Terror</option>
+                        <option value="fiction">Ficção</option>
+                        <option value="finance">Finanças</option>
+                        <option value="action">Ação</option>
+                        <option value="fantasy">Fantasia</option>
+                        <option value="novel">Novels</option>
+                        <option value="manga">Mangá</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Preço para o formato kindle" min="0" name="kindle_price" id="kindle_price" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Preço para o formato capa dura" min="0"  name="common_price" id="common_price" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Preço para o formato Especial" min="0"  name="special_price" id="special_price" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Unidades em estoque" min="1" name="inventory" id="inventory" class="form-control">
+                </div>
+                <div class="text-center p-5 d-flex align-item-center justify-content-around">
+                    <input type="submit" value="Editar Produto" class="btn btn-info">
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include('partials/footer') %> 
+    <script src="/js/admin/product/prod.js"></script>
+</body>
+</html>

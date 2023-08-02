@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <%- include('partials/head') %>
+  <link rel="stylesheet" href="/stylesheets/cart.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+  <main class="container">
+    <div class="bg-light" id="content_view">
+      <div class="mt-1" id="content_painel_cart">
+        <div  class="col-12 col-lg-6" id="items_cart">
+          <div id="content_cart"></div>
+        </div>
+        <div id="pay_cart" class="col-10 col-lg-5 d-none">
+          <div id="information_pay">
+            <span>Pagamento rápido e seguro, feito pelo mercado pago.</span>
+            <p>Frete grátis para a primeira compra em nosso site.</p>
+            <div id="addres"></div>
+          </div>
+          <div id="content_pay_cart" >
+            <span>Valor Total Dos Produtos</span>
+            <div><h1 id="price_cart"></h1></div>
+            <button class="btn btn-info d-none" type="button" id="btn_purchase">Finalizar Pedido</button>
+          </div>
+        </div>
+      </div>
+      <div id="pop_up">
+        <%- include('partials/pop_up/information') %>
+      </div>
+      <div class="row mt-5 border-top" id="content">
+        <% if(locals.emphasis) {%>
+        <div class="text-center"><h4>Os Dez livros mais vendidos!</h4></div>
+        <div class="row-books select_of">
+            <% emphasis.forEach(element => { %>
+              <div class="col-6 col-sm-3 col-lg-2 p-2">
+                <a href="/product/<%= element.books.id_books %> " class="container">
+                  <div class="border-on border">
+                    <div class="img-product">
+                      <img src="/img-books/<%= element.books.front_cover %> ">
+                    </div>
+                    <div class="content-text">
+                      <span><%= element.title %> </span>
+                    
+                      <div class="content-price">
+                        <small>Ofertas</small>
+                        <p>
+                          <% if(element.books.kindle_price > 0 ){ %>
+                            <strong>E-book R$: <%= element.books.kindle_price %> </strong>
+                          <% } %> 
+                        </p>       
+                        <p>
+                          <% if(element.books.common_price > 0 ){%>
+                            <strong>Capa Comun R$: <%= element.books.common_price %> </strong>
+                          <% } %> 
+                        </p>
+                        <p>
+                          <% if(element.books.special_price > 0 ){ %>
+                            <strong>Especial R$: <%= element.books.special_price %> </strong>
+                          <% } %> 
+                        </p>
+                      </div>
+                    </div>
+                  </div> 
+                </a>
+              </div>
+            <% }) %>
+          <% } %>  
+        </div>
+     </div>
+     <div class="border-top container ">
+    </div>
+  </main>
+  <%- include('partials/footer') %>
+<script src="/js/cart/user_cart.js"></script>
+<script src="/js/cart/information_cart.js"></script>
+</body>
+</html>

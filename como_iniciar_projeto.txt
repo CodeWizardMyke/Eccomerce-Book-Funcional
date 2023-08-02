@@ -1,0 +1,31 @@
+
+                    -> passo 1 <-
+
+//******//*****// COMO INSTALAR O BANDO DE DADOS //******//*****//
+    -1 Extraia o arquivo database.rar 
+    -2 Na workbench vá em opção: server -> selecione  -> Data Import
+    -5 Em Import from dump project folder, selecione a pasta database
+    -4 Em seguida confirme a importação no botao start Import
+
+                    -> passo 2 <-
+
+//******//*****// COMO CONFIGURAR O .ENV //******//*****//
+    1- Tenha em mão todos os dados do banco de dados e preencha conforme o solicitado
+    2- mercadopagoToken, e passession são adquiridos criando uma conta no mercado pago e criando um token para o uso da api_purchases
+       para mais detalhes acesse o site: https://www.mercadopago.com.br/developers/pt/reference
+    3- em jwtkey insira esta chave:"06548$$-_kalhkmmp_=$5489!S~"
+        assim vc conseguirá acessar a conta admin com o login e senha, caso contrário tera de criar uma conta nova e aponta-la como administrador lá no mysql workbench na tabela users coluna admin com valor: true
+
+                    -> passo 3 <-
+
+//******//*****// ANTES DE INICIAR O PROJETO //******//*****//
+    1- Certifique-se de dar o comando no terminal -> npm install
+        para instalar todas dependências
+    2- para acessar o site basta inserir na barra de pesquisa do navegador: http://localhost:3000/ 
+
+usuario padrão para ter acesso de administrador do site
+
+    login: admin@teste.com
+    senha : admin123
+
+para ser redirecionado para a página de administração basta clicar em ->[ PERFIL ]<- no site

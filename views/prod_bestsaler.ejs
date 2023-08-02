@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('partials/head.ejs') %>
+<link rel="stylesheet" href="/stylesheets/carousel.css">
+<script src="/js/functions/CreateProductsContent.js"></script>
+<body>
+  <%- include('partials/header.ejs') %> 
+  <main class="container">
+    <div class="bg-light" id="content_view">
+      <div id="top_page">
+        <div class="banner">
+          <img src="/images/banners/prop_1.png" alt="prop_1" class="img-thumbnail">
+          <img src="/images/banners/prop_2.png" alt="prop_2" class="img-thumbnail">
+        </div>
+      </div>
+      <div id="center_page">
+        <div>
+          <h4 class="border-bottom p-2 text-center">Produtos Mais Vendidos</h4>
+        </div>
+        <div id="preload" class="row">
+          <% for(let i = 0; i <= 23 ; i++) {%>
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2 p-3">
+            <div class="border-on">
+              <div class="img-product"></div>
+              <div class="content-text"></div>
+            </div>
+          </div>
+          <% } %> 
+        </div>
+        <div class="row-books d-none" id="row_products">
+        </div>
+      </div>
+      <nav aria-label="Navegação de página">
+        <ul class="pagination justify-content-center p-3">
+            <li class="page-item"><button class="page-link me-2" id="previous">Anterior</button></li>
+            <li class="page-item"><button class="page-link" id="next">Próximo</button></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+  <%- include('partials/footer') %> 
+  <script src="/js/products/get-products-bestsaler.js"></script>
+  <script src="/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <%- include('partials/head.ejs') %>
+<body>
+  <%- include('partials/header.ejs') %> 
+  <link rel="stylesheet" type="text/css" href="/stylesheets/payment/mercado_pago.css">
+  <link rel="stylesheet" href="/stylesheets/payment/payment.css">
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+  <main class="container">
+    <div class="bg-light" id="bh-100">
+      <!-- Shopping Cart -->
+      <section class="shopping-cart dark">
+
+          <div class="box-info-payment">
+            <div class="div-span">
+              <div class="text-center">
+                <h4>Dados do usuário</h4>
+                <p>Verifique todos os dados abaixo, e confirme para prosseguir com o pagamento.</p>
+              </div>
+              <div>Nome completo: <span id="full_name"></span></div>
+              <div>Email: <span id="email"></span></div>
+              <div>Telefone: <span id="telephone"></span></div>
+              <div>CPF: <span id="user_cpf"></span></div>
+              <div class="text-center"><span>Endereço de entrega</span></div>
+              <div>Cidade: <span id="city"></span></div> 
+              <div>Estado: <span id="state"></span></div>
+              <div>Bairro: <span id="district"></span></div>
+              <div>Rua: <span id="road"></span></div>
+              <div>Numero: <span id="number"></span>°</div>
+              <div>Complemento: <span id="complements"></span></div>
+            </div>
+            <div class="centralize">
+              <div id="items_cart" class="cart-user"></div>
+            </div>
+          </div>
+       
+        <div class="text-center">
+          <div class="p-5">
+            <h4>Preço total da sua compras</h4>
+            <h2 id="unit-price"></h2>
+            <div >
+              <div id="button-confirm"><button class="btn btn-warning" id="checkout-btn">Confirmar Compra</button></div>
+              <div id="button-checkout"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <%- include('partials/footer') %>
+  <script src="/js/payment/info_cart.js"></script>
+</body>
+</html>

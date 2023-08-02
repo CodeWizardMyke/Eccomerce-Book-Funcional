@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head') %> 
+    <link rel="stylesheet" href="/stylesheets/produto.css">
+</head>
+<body>
+    <%- include('partials/header')  %> 
+    <main class="container">
+      <div class="bg-white p-2">
+        <% if(locals.book) {%>
+            <div class="row box-product">
+                <div class="box-img-product">
+                    <img src="/img-books/<%= book.front_cover %>" alt="" class="img-thumbnail">
+                    <div class="box-product-type p-3 row">
+                        <div class="col-6 p-1">
+                            <div class="product-type" id="btn-kindle" >
+                                <span>Kindle</span>
+                                <input type="hidden" id="kindle" class="kindle" value="<%= book.kindle_price%>">
+                                <strong class="k_price">R$: <%= book.kindle_price %></strong>
+                            </div>
+                        </div>
+                        <div class="col-6 p-1">
+                            <div class="product-type" id="btn-common">
+                                <span>capa comum</span>
+                                <input type="hidden" id="common" class="common" value="<%= book.common_price %>">
+                                <strong class="c_price">R$: <%= book.common_price %></strong>
+                            </div>
+                        </div>
+                        <div class="col-12 p-1">
+                            <div class="product-type" id="btn-special">
+                                <span>formato especial</span>
+                                <input type="hidden" id="special" class="special" value="<%= book.special_price %>">
+                                <strong class="e_price">R$: <%= book.special_price %></strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <table class="table border">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Editora</th>
+                                    <th scope="col">Idioma</th>
+                                    <th scope="col">Capa comum</th>
+                                    <th scope="col">Dimensões</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><%= book.publishing_company %></td>
+                                    <td><%= book.language %></td>
+                                    <td><%= book.number_pages %></td>
+                                    <td><%= book.dimensions %></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div> 
+                <div class="box-details row p-2" id="box-details">
+                    <div class="shadow-sm">
+                        <div>
+                            <span class="d-flex price-style">
+                                <p>R$:</p>
+                                <p class="price"></p>
+                            </span>
+                        </div>
+                        <div>
+                            <h4 id="prod_title">Titulo: <%= book.title %></h4>
+                        </div>
+                        <div>
+                            <input type="hidden" class="inventory" value="<%= book.inventory %>">
+                            <p>
+                                vendemos livros para todas as partes do brasil, eBook kindle já estão disponíveis para compra e leitura. baixe nosso app gratis e confira
+                            </p>
+                        </div>
+                        <div>
+                            <div id="estoque">Produto:</div>
+                            <span>Entrega <strong>grátis</strong> para o seu primeiro pedido</span>
+                        </div>
+                        <div class="row">
+                            <span>Enviado por dh.livros</span>
+                            <span>Vendido por dh.livros</span>
+                        </div>
+                         <div class="mt-3 mb-3">
+                            <div class="row">
+                                <label for="select" class="status-estoque"></label>
+                                <div>
+                                    <input type="hidden" id="id_books" value="<%= book.id_books %>">
+                                    <label for="qtd">quantidade desejada:</label>
+                                    <input type="number" id="qtd_request" min="1" value="1" max="10">
+                                </div>
+                                <div id="qtd-feedback"></div>
+                            </div>
+                            <div>
+                                <button class="btn btn-warning" id="bt_cart_add_item">Adicionar ao carrinho</button>
+                            </div>
+                            <div id="feedback_cart"></div>
+                            <div id="link_my_cart" class="text-center"></div>
+                         </div>
+                    </div>
+                    <div class="sinopse border ">
+                        <div class="enfase">
+                            <strong>Sobre este livro</strong>
+                        </div>
+                        <p><%= book.synopsis %></p>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+ 
+        <div class="border-top container ">
+            <div class="row  mt-5" id="content">
+                <div class="row-books">
+                    <% if(locals.emphasis) {%>
+                      <% for(let book of emphasis) {%>
+                        <div class="col-6 col-sm-4 col-lg-3 col-xl-2 p-2">
+                          <a href="/product/<%= book.id_books %> " class="container">
+                            <div class="border-on">
+                              <div class="img-product">
+                                <img src="/img-books/<%= book.front_cover %> ">
+                              </div>
+                              <div class="content-text">
+                                <span><%= book.title %> </span>
+                              
+                                <div class="content-price">
+                                  <small>Ofertas</small>
+                                  <p>
+                                    <% if(book.kindle_price > 0 ){ %>
+                                      <strong>E-book R$: <%= book.kindle_price %> </strong>
+                                    <% } %> 
+                                  </p>       
+                                  <p>
+                                    <% if(book.common_price > 0 ){%>
+                                      <strong>Capa Comun R$: <%= book.common_price %> </strong>
+                                    <% } %> 
+                                  </p>
+                                  <p>
+                                    <% if(book.special_price > 0 ){ %>
+                                      <strong>Especial R$: <%= book.special_price %> </strong>
+                                    <% } %> 
+                                  </p>
+                                </div>
+                              </div>
+                            </div>       
+                          </a>
+                        </div>
+                        <% } %> 
+                    <% } %>  
+                  </div>
+        </div>
+      </div>
+    </main>
+    <%- include('partials/footer') %> 
+    <script src="/js/products/get-product-un.js"></script>
+</body>
+</html>

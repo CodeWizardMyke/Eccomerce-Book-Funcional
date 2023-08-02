@@ -1,0 +1,64 @@
+.user-information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-information >div {
+    padding: 15px;
+    text-align: justify;
+    margin: 10px;
+    border-radius: 15px;
+}
+.div-span span{
+    font-size: 13pt;
+    font-weight: bolder;
+}
+.div-span div{
+    padding: 2px;
+    margin-top: 2px;
+}
+.cart-user{
+    height: 470px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px #dddddda4;
+}
+.cart-user > div{
+    display: flex;
+    border: solid 1px #dddddda4;
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+.box-img-book{
+    height: 130px;
+    box-shadow: 0px 0px 15px black;
+    border-radius: 10px;
+}
+.box-img-book img{
+    image-rendering: pixelated;
+    height: 100%;
+    padding: 5px;
+}
+.box-text-book{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.box-text-book strong{
+    font-weight: bold;
+}
+.box-info-payment{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}

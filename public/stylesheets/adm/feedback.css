@@ -1,0 +1,33 @@
+/*feedback manager*/
+.form_feedback{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 100px;
+    background-color: #dddddd88;
+}
+.form_feedback select{
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+}
+.ress_feedback{
+    height: 400px;
+    width: 100%;
+    padding: 15px;
+}
+.painel_left_adm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.painel_left_adm >div{
+    box-shadow: 0px 0px 15px #c2c2c2;
+}
+#msg_div{
+    text-align: center;
+    overflow-y: auto;
+    height: 350px;
+}

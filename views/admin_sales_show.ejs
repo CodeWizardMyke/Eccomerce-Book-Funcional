@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/adm/index.css">
+    <link rel="stylesheet" href="/stylesheets/adm/users/get_user.css">
+    <link rel="stylesheet" href="/stylesheets/adm/manager/show.css">
+<body>
+    <%- include('partials/header.ejs') %> 
+    <main class="container">
+        <div class="bg-white">
+            <div class="content_page_adm">
+                <div class="painel_rigth_adm">
+                    <%- include('partials/admin/menu') %>
+                </div>
+                <div class="painel_left_adm">
+                    <div class="info_user scale"></div>
+                    <div class="box_user scale" >
+                        <div class="img_book"></div>
+                        <div class="cart_user">
+                    </div>
+                    </div>
+                    <div class="payment_user"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
+    <script src="/js/admin/index.js"></script>
+    <script src="/js/admin/sales/show_sales.js"></script>
+</body>
+</html>

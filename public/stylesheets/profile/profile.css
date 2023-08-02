@@ -1,0 +1,123 @@
+body{
+    user-select: none;
+}
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
+.box-perfil{
+    background-color: #fff;
+    display: flex
+}
+.side-left{
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.avatar-usuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+.avatar-usuario img{
+    width: 40%;
+}
+.nav li{
+    margin: 5px;
+}
+.side-left .nav a{
+    text-decoration: none;
+    color: #dddd;
+    font-weight: 500;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0,.3);
+    transition: 500ms all ;
+}
+.nav a:hover{
+    color: #fff;
+    box-shadow: 0px 0px 0px #ffff;
+}
+
+.side-right{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    overflow-y: auto;
+    flex-direction: column;
+}
+.side-right > div{
+    width: 100%;
+    overflow-x: auto;
+}
+.spacing{
+    height: 20%;
+}
+/*FORMATAÇÃO DOS FORMULÁRIOS DO USUARIO */
+
+
+/*avatar do usuario*/
+.avatar{
+    border-radius: 100%;
+}
+
+/*box de espaço para perfil do usuario*/
+.box-space{
+    height: 30vh;
+    width: 100%;
+}
+
+/*formatação do botão da pagina profile*/
+.bt-profile{
+    color: white;
+    font-weight: 600;
+    width: 100%;
+}
+
+.div_msg_profile{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+.msg_profile{
+    text-align: justify;
+    padding: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+#form_user_config div{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#form_user_config input{
+    width: 100%;
+    padding: 5px;
+    margin: 5px auto 5px auto;
+}
+#form_user_config img{
+    width: 80px;
+    padding: 5px;
+    border: #fff;
+    border-radius: 50px;
+    box-shadow: #929292dd 0px 0px 15px ;
+}
+.border-radius-50{
+    border-radius: 50px;
+}

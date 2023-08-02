@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/adm/index.css">
+    <link rel="stylesheet" href="/stylesheets/adm/users/get_user.css">
+    <link rel="stylesheet" href="/stylesheets/adm/products/prod.css">
+<body>
+    <%- include('partials/header.ejs') %> 
+    <main class="container">
+        <div class="bg-white">
+            <div class="content_page_adm">
+                <div class="painel_rigth_adm">
+                    <%- include('partials/admin/menu') %>
+                </div>
+                <div class="painel_left_adm">
+                    <div class="text-end p-2">
+                        <form id="form_search">
+                            <label for="search">Digite o id do pedido:</label>
+                            <input type="search" id="prod_search" name="search" placeholder="Buscar...">
+                        </form>
+                    </div>
+                    <div id="search_result">
+                        <table class="table">
+                             <thead>
+                                 <tr>
+                                     <th>ID:</th>
+                                     <th>Pagamento</th>
+                                     <th>Valor</th>
+                                     <th>Status</th>
+                                     <th>Mais detalhes</th>
+                                 </tr>
+                             </thead>
+                             <tbody id="result"></tbody>
+                        </table>
+                        <div id="noDataReturn"></div>
+                     </div>
+                     <nav aria-label="Navegação de página">
+                        <ul class="pagination justify-content-center p-3">
+                            <li class="page-item"><button class="page-link me-2" id="previous">Anterior</button></li>
+                            <li class="page-item"><button class="page-link" id="next">Próximo</button></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
+    <script src="/js/admin/index.js"></script>
+    <script src="/js/admin/sales/search_sales.js"></script>
+</body>
+</html>

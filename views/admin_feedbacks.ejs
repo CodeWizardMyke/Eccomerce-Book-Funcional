@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/adm/index.css">
+<body>
+    <%- include('partials/header.ejs') %> 
+    <main class="container">
+        <div class="bg-white">
+            <div class="content_page_adm">
+                <div class="painel_rigth_adm">
+                    <%- include('partials/admin/menu') %>
+                </div>
+                <div class="painel_left_adm">
+                    <div>
+                        <h4>Lista de feedback aberta por usuários</h4>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>id:</th>
+                                <th>assunto</th>
+                                <th>mostrar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="result"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
+    <script src="/js/admin/index.js"></script>
+    <script src="/js/admin/feedback/get.js"></script>
+</body>
+</html>

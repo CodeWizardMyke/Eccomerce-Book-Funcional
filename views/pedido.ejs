@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/head') %> 
+</head>
+<body>
+    <main class="container">
+        <div class="col-12 bg-light container  d-flex justify-content-center align-items-center flex-column " style="height: 85vh;">
+            <% if(locals.body) {%>
+                <div class="text-center">
+                    <h2>Pedido realizado com sucesso!</h2>
+                </div>
+                <div class="text-center m-5">
+                    <span>Numero do pedido: <%= body ? body.payment_id :'' %> </span>
+                    <h5>your payment has been <strong><%= body ? body.status : '' %></strong> </h5>
+                    <span style="font-size: 14pt; text-align: center;" >
+                        Recebemos o seu pedido e estamos aguardando a confirmação do pagamento.
+                        Acompanhe o status do seu pedido 
+                        pela sua conta.
+                    </span>
+                </div>
+            <% }else{ %>  
+                <div>
+                    <h2>Não foi possivel completar o seu pedido.</h2>
+                </div>
+            <% } %> 
+            <a href="/" class="btn btn-info" style="color: #fff;">Retornar ao site!</a>
+        </div>
+    </main>
+    <%- include('partials/footer') %> 
+</body>
+</html> 

@@ -1,0 +1,26 @@
+<div id="form_user_config" class="d-none" >
+    <div>
+        <form action="/api/users/form/put?_method=put"  enctype="multipart/form-data" method="post" class="form-group" id="form_user_modify">
+            <div class="img-user">
+                <img src="" alt="avatar_user" id="img_user_modify">
+            </div>
+            <div>
+                <input type="file" name="avatar_user" id="avatar_user" class="form-control">
+            </div>
+            <div>
+                <input type="text" name="username" id="nick_name" placeholder="Nome de usuário" class="form-control">
+            </div>
+            <div>
+                <input type="email" name="email" id="user_email" placeholder="Email de login" class="form-control">
+                <input type="email" name="re_email" id="user_re_email" placeholder="Confirmação de email" class="form-control"> 
+            </div> 
+            <div>
+                <input type="password" name="password" id="user_pass" placeholder="Senha do usuário" class="form-control">
+                <input type="password" name="re_password" id="user_re_pass" placeholder="Confirmação de senha" class="form-control">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-info">Modificar</button>
+            </div>
+        </form>
+    </div>
+</div>

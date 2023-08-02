@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include('partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/formularios.css">
+<body>
+    <%- include('partials/header') %> 
+    <main class="container">
+        <div class="row" style="height: 75vh;">
+            <div class="box-logo-forms">
+                <img src="/images/img/logoForms.png" alt="logo-icon">
+            </div>
+            <div class="col-12">
+                <form id="form_login">
+                    <div class="form-group">
+                        <input type="email" class="form-control"  name="email" id="email" placeholder="login de usuario" value="">
+                        <div id="err_email"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control"  name="password" id="password" placeholder="informe sua senha" value="">
+                        <div id="err_password"></div>
+                    </div>
+                    <div>
+                        <button type="submit" id="submit" class="btn btn-info mt-2">Entrar</button>
+                    </div>
+                    <div class="createAcc">
+                        <label>Não tem uma conta? crie uma agora mesmo</label>
+                        <a href="/auth/sign">Criar minha conta</a>
+                    </div>
+                </form>
+            </div>
+            <div class="boxSpacing"></div>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
+    <script src="/js/user_login.js"></script>
+</body>
+</html>

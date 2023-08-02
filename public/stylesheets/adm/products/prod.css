@@ -1,0 +1,43 @@
+#myForm div{
+    padding-top: 5px;
+}
+#form_create_product .send_form-adm{
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*view show prod and edit prod*/
+.img_book{
+    height: 275px;
+}
+.img_book img{
+    height: 100%;
+}
+#box-for-prod{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#box-for-inf{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#box-for-inf > div{
+    text-align: center;
+    padding: 1px;
+    width: 200px;
+    margin: 5px;
+    background-color: #dddd;
+}
+.page-config{
+    min-height: 700px;
+}
+#product{
+    padding: 15px;
+}
